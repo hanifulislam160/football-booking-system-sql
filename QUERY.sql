@@ -40,3 +40,37 @@ CREATE TABLE Bookings (
   CONSTRAINT fk_bookings_user FOREIGN KEY (user_id) REFERENCES Users (user_id) ON DELETE RESTRICT ON UPDATE CASCADE,
   CONSTRAINT fk_bookings_match FOREIGN KEY (match_id) REFERENCES Matches (match_id) ON DELETE RESTRICT ON UPDATE CASCADE
 );
+
+
+INSERT INTO Users (user_id, full_name, email, role, phone_number) VALUES
+(1, 'Haniful Islam', 'haniful@gmail.com', 'Football Fan', '01711111111'),
+(2, 'Antor Ahmed', 'antor@gmail.com', 'Football Fan', '01722222222'),
+(3, 'Mominul Haque', 'mominul@gmail.com', 'Ticket Manager', '01733333333'),
+(4, 'Arnab Das', 'arnab@gmail.com', 'Football Fan', '01744444444'),
+(5, 'Additto Roy', 'additto@gmail.com', 'Football Fan', '01755555555'),
+(6, 'Mizanur Rahman', 'mizan@gmail.com', 'Ticket Manager', '01766666666'),
+(7, 'Kabirul Islam', 'kabirul@gmail.com', 'Football Fan', '01777777777'),
+(8, 'Ridoy Khan', 'ridoy@gmail.com', 'Football Fan', '01788888888'),
+(9, 'Jisan Chowdhury', 'jisan@gmail.com', 'Football Fan', '01799999999'),
+(10, 'Kader Mollah', 'kader@gmail.com', 'Ticket Manager', '01710101010'),
+(11, 'Siam Hasan', 'siam@gmail.com', 'Football Fan', '01712121212'),
+(12, 'Niloy Sen', 'niloy@gmail.com', 'Football Fan', '01713131313'),
+(13, 'Emon Ali', 'emon@gmail.com', 'Football Fan', '01714141414'),
+(14, 'Masud Rana', 'masud@gmail.com', 'Ticket Manager', '01715151515'),
+(15, 'Ramjan Ali', 'ramjan@gmail.com', 'Football Fan', '01716161616');
+
+
+INSERT INTO Matches (match_id, fixture, tournament_category, base_ticket_price, match_status) VALUES
+(101, 'Real Madrid vs Barcelona', 'Champions League', 150.00, 'Available'),
+(102, 'Man City vs Liverpool', 'Premier League', 120.00, 'Selling Fast'),
+(103, 'Bayern Munich vs PSG', 'Champions League', 130.00, 'Available'),
+(104, 'AC Milan vs Inter Milan', 'Serie A', 90.00, 'Sold Out'),
+(105, 'Juventus vs Roma', 'Serie A', 80.00, 'Available');
+
+
+INSERT INTO Bookings (booking_id, user_id, match_id, seat_number, payment_status, total_cost) VALUES
+(501, 1, 101, 'A-12', 'Confirmed', 150.00),
+(502, 1, 102, 'B-04', 'Confirmed', 120.00),
+(503, 2, 101, 'A-13', 'Confirmed', 150.00),
+(504, 2, 101, NULL, NULL, 150.00),
+(505, 3, 102, 'C-20', 'Pending', 120.00);
