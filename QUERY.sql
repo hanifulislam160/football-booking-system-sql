@@ -41,6 +41,16 @@ CREATE TABLE Bookings (
   CONSTRAINT fk_bookings_match FOREIGN KEY (match_id) REFERENCES Matches (match_id) ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
+-- Query one
+
+SELECT
+    match_id,
+    fixture,
+    base_ticket_price
+FROM matches
+WHERE tournament_category = 'Champions League'
+AND match_status = 'Available';
+
 
 INSERT INTO Users (user_id, full_name, email, role, phone_number) VALUES
 (1, 'Haniful Islam', 'haniful@gmail.com', 'Football Fan', '01711111111'),
