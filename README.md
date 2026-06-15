@@ -12,10 +12,8 @@ https://github.com/hanifulislam160/football-booking-system-sql
 
 ### Interview Video :
 
-Add your public Google Drive / YouTube (Unlisted) link here
+https://app.usebubbles.com/pUUZDSfCeiWJzSYBRHK8we/recording-jun-15-2026
 
-Example:
-[Paste Interview Video Link]
 
 ---
 
